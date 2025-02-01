@@ -131,12 +131,12 @@ section {
 }
 
 /* Skifter sektionernes placering mellem venstre og højre */
-.tema:nth-child(odd) .tema-box {
+.tema:nth-child(even) .tema-box {
   margin-left: 30%;
   margin-right: auto;
 }
 
-.tema:nth-child(even) .tema-box {
+.tema:nth-child(odd) .tema-box {
   margin-left: auto;
   margin-right: 30%;
 }

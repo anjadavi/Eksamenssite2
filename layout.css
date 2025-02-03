@@ -3,23 +3,18 @@ body {
   position: relative;
 }
 
-.forside-menu {
+body .main-portfolio {
+  background-image: url(/img/stjerne.baggrund.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.menu {
   display: flex;
   justify-content: center;
   gap: 30px;
   padding: 20px;
-}
-
-.forside-menu img {
-  width: auto;
-  max-width: 120px;
-  height: auto;
-  cursor: pointer;
-}
-
-.forside-menu img:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
 }
 
 .main-container {
@@ -28,7 +23,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  flex-direction: column; /* note: elementerne står oven på hianden lodret */
+  flex-direction: column; /* Note: Mine to logoer/elementer plaeceres lodret oven på hinanden */
 }
 
 .portfolio-container {
@@ -38,23 +33,11 @@ body {
   width: 100%;
 }
 
-.title-img {
-  max-width: 45%;
-  height: auto;
-  cursor: pointer;
-}
-
 .navn-container {
   position: absolute;
   top: 40%;
   right: 7%;
   width: 100%;
-}
-
-.navn-img {
-  max-width: 45%;
-  height: auto;
-  cursor: pointer;
 }
 
 .stjerner {
@@ -75,62 +58,31 @@ body {
   margin-top: 700px;
   width: 100%;
 }
-
-body {
-  animation: fadeIn 1.5s ease-in-out;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 10px;
   }
-  to {
-    opacity: 1;
+  .portfolio-container,
+  .navn-container {
+    width: 1000%;
+    max-width: 280px;
+    margin-bottom: 20px;
+  }
+  .stjerner {
+    max-width: 200px;
+  }
+  .stjerner2 {
+    max-width: 300px;
+  }
+  .beograd {
+    width: 100%;
+    margin-top: 480px;
   }
 }
 
-section {
-  display: block;
-  unicode-bidi: isolate;
-}
-
-.tema-box {
-  display: block;
-  background-color: #ffffff;
-  padding: 40px;
-  margin-bottom: 25px;
-  border-radius: 100%;
-  border: 5px solid rgb(0, 0, 0);
-}
-
-.tema-box:hover {
-  transform: scale(1.02);
-  transition: transform 0.6s ease;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
-  border-color: #f9f298;
-}
-
-.logoer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logoer img {
-  width: 100%;
-}
-
-.logoer img:first-child {
-  width: 100%;
-  max-width: 250px;
-}
-
-.logoer img:last-child {
-  width: 100%;
-  max-width: 250px;
-  margin-top: 20px;
-}
-
-/* Skifter sektionernes placering mellem venstre og højre */
+/* __________________________________________ */
+/* note: Skiftevis venstre/højre */
 .tema:nth-child(even) .tema-box {
   margin-left: 30%;
   margin-right: auto;
@@ -139,4 +91,207 @@ section {
 .tema:nth-child(odd) .tema-box {
   margin-left: auto;
   margin-right: 30%;
+}
+
+/* Grundlæggende styling */
+body {
+  font-size: 16px;
+  background-image: url(img/forsidebaggrund.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  font-family: "Big Caslon", serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hovedcontainer */
+.main-portfolio-content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Tilbage-knap */
+.back {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #ad0000;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.back:hover {
+  background-color: #8a0000;
+}
+
+/* Overskrifter */
+h1,
+h2 {
+  color: #ad0000;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+/* Indholdstyper */
+.main-portfolio-content-intro {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+/* Grid layout */
+.grid_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+/* Billeder */
+.grid_1 img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid_1 img:hover {
+  transform: scale(1.05);
+}
+
+/* Video */
+.visual iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+/* Responsiv design */
+@media only screen and (max-width: 768px) {
+  .grid_1 {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .visual iframe {
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .back {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+/* OM MIG ____________________________________________ */
+.section-ommig {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 50px;
+}
+
+.section-ommig2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding-top: 100px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.anjadavidovic {
+  max-width: 900px;
+  padding-top: 50px;
+}
+
+.mig,
+.cv {
+  max-width: 450px;
+  margin-top: 50px;
+  border-radius: 50px;
+  box-shadow: 0 4px 30px rgb(250, 151, 3);
+}
+
+.mig {
+  margin-right: 60px;
+}
+
+.cv {
+  margin-left: 60px;
+}
+
+.p-ommig {
+  font-family: "Poppins", sans-serif;
+  margin-left: 60px;
+  padding-left: 150px;
+  margin-right: 60px;
+  font-size: 18px;
+}
+
+.ommig {
+  width: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  .section-ommig,
+  .section-ommig2 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 30px;
+  }
+
+  .anjadavidovic {
+    max-width: 100%;
+    padding-top: 30px;
+  }
+
+  .mig,
+  .cv {
+    max-width: 90%;
+    margin: 20px auto;
+  }
+
+  .p-ommig {
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .ommig,
+  .fcb-logo {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
 }

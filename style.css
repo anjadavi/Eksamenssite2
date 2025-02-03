@@ -1,3 +1,4 @@
+/* GENNERELT FOR ALLE SIDER _____________________________________ */
 .menu img {
   width: auto;
   max-width: 120px;
@@ -8,6 +9,14 @@
 .menu img:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
+}
+
+/* PORTFOLIO ______________________________________________________ */
+body .main-portfolio {
+  background-image: url(img/stjerne.baggrund.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .tema-box {
@@ -45,4 +54,132 @@
   width: 100%;
   max-width: 250px;
   margin-top: 20px;
+}
+
+.tema:nth-child(even) .tema-box {
+  margin-left: 30%;
+  margin-right: auto;
+}
+
+.tema:nth-child(odd) .tema-box {
+  margin-left: auto;
+  margin-right: 30%;
+}
+
+.tilbage {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.tilbage:hover {
+  background-color: #fcc23b;
+}
+
+.h1 {
+  width: 400px;
+  margin-top: 40px;
+}
+
+.grid_1 .h2 {
+  width: 200px;
+}
+
+.grid_1 .præsentationskort {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.main-portfolio-content-introuge {
+  padding: 25px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid_1 .h1 {
+    font-size: 2em;
+  }
+
+  .grid_1 .h2 {
+    font-size: 1.5em;
+  }
+
+  .tilbage {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+/* OM MIG _________________________________________________________ */
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.anjadavidovic {
+  max-width: 900px;
+  padding-top: 50px;
+}
+
+.mig,
+.cv {
+  max-width: 450px;
+  margin-top: 50px;
+  border-radius: 50px;
+  box-shadow: 0 4px 30px rgb(250, 151, 3);
+}
+
+.mig {
+  margin-right: 60px;
+}
+
+.cv {
+  margin-left: 60px;
+}
+
+.p-ommig {
+  font-family: "Poppins", sans-serif;
+  margin-left: 60px;
+  padding-left: 150px;
+  margin-right: 60px;
+  font-size: 18px;
+}
+
+.ommig {
+  width: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  .anjadavidovic {
+    max-width: 100%;
+    padding-top: 30px;
+  }
+
+  .mig,
+  .cv {
+    max-width: 90%;
+    margin: 20px auto;
+  }
+
+  .p-ommig {
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .ommig,
+  .fcb-logo {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
 }

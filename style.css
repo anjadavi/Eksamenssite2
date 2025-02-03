@@ -90,7 +90,6 @@ body .main-portfolio {
 .grid_1 .h2 {
   width: 200px;
 }
-
 .grid_1 .præsentationskort {
   width: 100%;
   border-radius: 10px;
@@ -101,6 +100,12 @@ body .main-portfolio {
   padding: 25px;
   line-height: 1.5;
   font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+}
+.beskrivelser p {
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 @media only screen and (max-width: 768px) {
@@ -146,7 +151,7 @@ img {
 }
 
 .p-ommig {
-  font-family: "Poppins", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   margin-left: 60px;
   padding-left: 150px;
   margin-right: 60px;
